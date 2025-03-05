@@ -10,23 +10,52 @@ nav {
     justify-content: space-between;
 }
 
-nav img {
-    
+#nav-logo-img {
     width: 114.91px;
     height: 33.99px;
     top: 48.7px;
     left: 140.92px;
 }
 
-nav ul {
+#nav-ul {
     display: flex;
     list-style: none;
 }
 
-nav ul li a {
-    font-family: poppins;
+#nav-ul li {
+    margin-left: 56px;
+}
+
+#nav-ul li a {
+    color: hsl(215, 20%, 16%);
+    font-family: Poppins;
     font-size: 17px;
     line-height: 25.5px;
     text-decoration: none;
+}
+
+#header-content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48.7px;
+}
+
+.header-content-item {}
+
+.header-content-item h4 {
+    color: #DF6951;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.header-content-item h1 {
+    color: #181E4B;
+    font-family: Volkhov;
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 89px;
+    letter-spacing: -4%;
 
 }
