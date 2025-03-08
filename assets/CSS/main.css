@@ -44,7 +44,7 @@ nav {
 
 }
 
-#sign-up-button {
+.sign-up-button {
     padding: 7px 19px 7px 19px;
     border: 1px solid #212832;
     border-radius: 5px;
@@ -191,6 +191,10 @@ nav {
     display: none;
 }
 
+.sign-up-button-mobile {
+    display: none;
+}
+
 #header-menu {
     display: none;
     margin-left: -20px;
@@ -229,6 +233,20 @@ nav {
     justify-content: space-between;
     padding: 30px 0px 30px 0px;
 }
+
+.lang-2 {
+    display: none;
+}
+
+.lang-2-lang {
+    visibility: hidden;
+}
+
+.lang-2-img {
+    visibility: hidden;
+}
+
+
 
 .header-menu-item img {
     width: 37px;

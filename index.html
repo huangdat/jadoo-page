@@ -21,32 +21,38 @@
     <header>
         <nav id="header-nav">
             <a href="#"><img src="assets/images/logo.png" alt="logo"></a>
-            
+
             <ul id="nav-ul">
                 <li><a href="#">Destinations</a></li>
                 <li><a href="#">Hotels</a></li>
                 <li><a href="#">Flights</a></li>
                 <li><a href="#">Bookings</a></li>
                 <li><a href="#">Login</a></li>
-                <li><a  id="sign-up-button" href="#">Sign up</a></li>
+                <li><a class="sign-up-button" href="#">Sign up</a></li>
                 <li>
                     <p id="languages-selection" href="#">
                         EN <i class="ti-angle-down"></i>
                     </p>
                     <p id="sub-languages-selection">VI</p>
-                    
+
                 </li>
             </ul>
-
-            <img src="assets/images/open-menu.png" alt="open-menu" id="open-menu">
+            <div id="nav-mobile">
+                <a class="sign-up-button sign-up-button-mobile" href="#">Sign up</a>
+                <img src="assets/images/open-menu.png" alt="open-menu" id="open-menu">
+            </div>
+            
         </nav>
 
         <div id="header-content-container">
             <div class="header-content-item">
                 <h4>BEST DESTINATIONS AROUND THE WORLD</h4>
-                <h1><div id="decoration-text">Travel, enjoy <img src="assets/images/decore-header-2.png" alt="decore-header-2"></div>
+                <h1>
+                    <div id="decoration-text">Travel, enjoy <img src="assets/images/decore-header-2.png"
+                            alt="decore-header-2"></div>
                     and live a new <br>
-                    and full life</h1>
+                    and full life
+                </h1>
                 <p>Built Wicket longer admire do barton vanity itself do in it.
                     Preferred to sportsmen it engrossed listening.
                     Park gate sell they west hard for the.</p>
@@ -67,34 +73,43 @@
 
         <div id="header-menu">
             <div id="header-menu-content">
-                <div class="header-menu-item" id="header-menu-item-active">
-                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                <div class="header-menu-item lang-1">
+                    <p class="lang-1-lang">Language:</p>
+                    <p id="header-menu-item-active lang-1-en">English</p>
+                    <img class="lang-1-img" src="assets/images/show-down.png" alt="show-down">
                 </div>
-                <img class="line" src="assets/images/line.png" alt="line">   
-                             
-                <div class="header-menu-item">
-                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+
+                <div class="header-menu-item lang-2">
+                    <p class="lang-2-lang">Language:</p>
+                    <p id="header-menu-item-active lang-2-vi">Vietnamese</p>
+                    <img class="lang-2-img" src="assets/images/show-down.png" alt="show-down">
                 </div>
-                <img class="line" src="assets/images/line.png" alt="line">                
+
+                <img class="line" src="assets/images/line.png" alt="line">
 
                 <div class="header-menu-item">
-                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                    <p>Destinations:</p> <img src="assets/images/show-down.png" alt="show-down">
                 </div>
-                <img class="line" src="assets/images/line.png" alt="line">                
+                <img class="line" src="assets/images/line.png" alt="line">
 
                 <div class="header-menu-item">
-                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                    <p>Hotels:</p> <img src="assets/images/show-down.png" alt="show-down">
                 </div>
-                <img class="line" src="assets/images/line.png" alt="line">                
+                <img class="line" src="assets/images/line.png" alt="line">
 
                 <div class="header-menu-item">
-                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                    <p>Flights:</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+                <img class="line" src="assets/images/line.png" alt="line">
+
+                <div class="header-menu-item">
+                    <p>Bookings:</p> <img src="assets/images/show-down.png" alt="show-down">
                 </div>
             </div>
-            
+
         </div>
 
-        
+
     </header>
 
     <main>
@@ -163,7 +178,24 @@
         }
     });
 
-    // 
+    // if user click .lang-1-en or lang-1-img, lang-2 will not be display:none anymore and lang-1-img will change to show-up.png. And reverse.
+    // if user click .lang-2-vi, lang-1 will be display:none. And lang-2 will be display:block.
+    // and reverse.
+    document.querySelector('.lang-1').addEventListener('click', function (event) {
+        event.stopPropagation();
+        var lang1 = document.querySelector('.lang-1');
+        var lang2 = document.querySelector('.lang-2');
+        var lang1Img = document.querySelector('.lang-1-img');
+        if (lang2.style.display === 'none') {
+            lang2.style.display = 'flex';
+            lang1Img.src = 'assets/images/show-up.png';
+        } else {
+            lang2.style.display = 'none';
+            lang1Img.src = 'assets/images/show-down.png';
+        }
+    });
+
+    
 </script>
 
 </html>

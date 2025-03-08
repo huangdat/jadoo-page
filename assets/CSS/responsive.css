@@ -6,7 +6,21 @@
         padding: 50px 20px 0px 20px;
     }
 
-    #nav-logo-img {
+    #nav-logo-img {}
+
+    #nav-mobile {
+        display: flex;
+    }
+
+    .sign-up-button-mobile {
+        display: block;
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 17px;
+        text-decoration: none;
+        color: #212832;
+        margin: auto;
+        margin-right: 25px;
     }
 
 
@@ -23,11 +37,12 @@
     .header-content-item {
         max-width: 100%;
     }
+
     #header-character {
         margin-top: 32px;
         height: auto;
     }
-    
+
     #cta {
         max-width: 343px;
     }
