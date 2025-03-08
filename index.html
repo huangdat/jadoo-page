@@ -65,8 +65,33 @@
 
         </div>
 
-        <div id="header-menu" class="header-menu-open">
-            HELLO
+        <div id="header-menu">
+            <div id="header-menu-content">
+                <div class="header-menu-item" id="header-menu-item-active">
+                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+                <img class="line" src="assets/images/line.png" alt="line">   
+                             
+                <div class="header-menu-item">
+                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+                <img class="line" src="assets/images/line.png" alt="line">                
+
+                <div class="header-menu-item">
+                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+                <img class="line" src="assets/images/line.png" alt="line">                
+
+                <div class="header-menu-item">
+                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+                <img class="line" src="assets/images/line.png" alt="line">                
+
+                <div class="header-menu-item">
+                    <p>Language:</p> <p>English</p> <img src="assets/images/show-down.png" alt="show-down">
+                </div>
+            </div>
+            
         </div>
 
         
@@ -121,6 +146,14 @@
     document.getElementById('open-menu').addEventListener('click', function () {
         var headerMenu = document.getElementById('header-menu');
         var openMenu = document.getElementById('open-menu');
+        var body = document.getElementsByTagName('body')[0];
+        if (body.classList.contains('body-mobile-menu')) {
+            body.classList.remove('body-mobile-menu');
+            headerMenu.style.display = 'none';
+        } else {
+            body.classList.add('body-mobile-menu');
+            headerMenu.style.display = 'block';
+        }
         if (headerMenu.classList.contains('header-menu-open')) {
             headerMenu.classList.remove('header-menu-open');
             openMenu.src = 'assets/images/open-menu.png';
@@ -130,7 +163,7 @@
         }
     });
 
-    
+    // 
 </script>
 
 </html>
