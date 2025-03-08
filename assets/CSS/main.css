@@ -12,7 +12,9 @@ body {
     background-size: 42%;
 }
 
-header {}
+header {
+    position: relative;
+}
 
 nav {
     display: flex;
@@ -39,6 +41,7 @@ nav {
 
 #nav-ul li {
     margin-left: 56px;
+    
 }
 
 #sign-up-button {
@@ -47,12 +50,27 @@ nav {
     border-radius: 5px;
 }
 
-#nav-ul li a {
+#nav-ul li > * {
     color: hsl(215, 20%, 16%);
     font-family: Poppins;
     font-weight: 500;
     font-size: 17px;
     text-decoration: none;
+}
+
+#languages-selection {
+    cursor: pointer;
+    
+}
+
+#sub-languages-selection {
+    display: none;
+    position: absolute;
+}
+
+
+.ti-angle-down {
+    font-size: 60%;
 }
 
 #header-content-container {
@@ -82,6 +100,20 @@ nav {
     line-height: 89px;
     letter-spacing: -4%;
     margin: 0px;
+}
+
+#decoration-text {
+    display: inline;
+    position: relative;
+}
+
+#decoration-text img {
+    position: absolute;
+    top: 72px;
+    left: 230px;
+    z-index: -1;
+    max-width: 100%;
+    filter: 
 }
 
 .header-content-item p {
@@ -156,4 +188,27 @@ nav {
     color: #686D77;
     display: flex;
     align-items: center;
+}
+
+#open-menu {
+    display: none;
+}
+
+#header-menu-open {
+    display: none;
+    background: #FFFFFF;
+    min-width: 100vw;
+    height: 100%;
+    margin-top: 90px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 0px;
+}
+
+.body-mobile-menu {
+    background: #FFF1DA;
 }

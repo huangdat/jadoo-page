@@ -6,7 +6,7 @@
         padding: 50px 20px 0px 20px;
     }
 
-   #nav-ul {
+    #nav-ul {
         display: none;
     }
 
@@ -26,6 +26,14 @@
     
     #cta {
         max-width: 343px;
+    }
+
+    #open-menu {
+        display: block;
+    }
+
+    .header-menu-open {
+        display: block;
     }
 
 }

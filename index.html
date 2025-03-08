@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadoo</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/responsive.css">
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <link rel="stylesheet" href="assets/CSS/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,9 +14,7 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/icons/themify-icons/themify-icons.css">
 </head>
 
 <body>
@@ -31,15 +29,23 @@
                 <li><a href="#">Bookings</a></li>
                 <li><a href="#">Login</a></li>
                 <li><a  id="sign-up-button" href="#">Sign up</a></li>
-                <li><a href="#">EN <img src="" alt=""></a></li>
+                <li>
+                    <p id="languages-selection" href="#">
+                        EN <i class="ti-angle-down"></i>
+                    </p>
+                    <p id="sub-languages-selection">VI</p>
+                    
+                </li>
             </ul>
+
+            <img src="assets/images/open-menu.png" alt="open-menu" id="open-menu">
         </nav>
 
         <div id="header-content-container">
             <div class="header-content-item">
                 <h4>BEST DESTINATIONS AROUND THE WORLD</h4>
-                <h1>Travel, enjoy
-                    and live a new
+                <h1><div id="decoration-text">Travel, enjoy <img src="assets/images/decore-header-2.png" alt="decore-header-2"></div>
+                    and live a new <br>
                     and full life</h1>
                 <p>Built Wicket longer admire do barton vanity itself do in it.
                     Preferred to sportsmen it engrossed listening.
@@ -58,6 +64,12 @@
             </div>
 
         </div>
+
+        <div id="header-menu" class="header-menu-open">
+            HELLO
+        </div>
+
+        
     </header>
 
     <main>
@@ -68,5 +80,57 @@
 
     </footer>
 </body>
+
+<script>
+    // sub-languages-selection will have a display of block when languages-selection is clicked. Click again to hide.
+    document.getElementById('languages-selection').addEventListener('click', function (event) {
+        event.stopPropagation();
+        var subLang = document.getElementById('sub-languages-selection');
+        if (subLang.style.display === 'block') {
+            subLang.style.display = 'none';
+        } else {
+            subLang.style.display = 'block';
+        }
+    });
+
+    document.addEventListener('click', function () {
+        var subLang = document.getElementById('sub-languages-selection');
+        if (subLang.style.display === 'block') {
+            subLang.style.display = 'none';
+        }
+    });
+
+    // Switch between EN and VI
+    document.getElementById('sub-languages-selection').addEventListener('click', function (event) {
+        event.stopPropagation();
+        var mainLang = document.getElementById('languages-selection');
+        var subLang = document.getElementById('sub-languages-selection');
+        var temp = mainLang.innerHTML;
+        mainLang.innerHTML = subLang.innerHTML + ' <i class="ti-angle-down"></i>';
+        subLang.innerHTML = temp.trim();
+        subLang.style.display = 'none';
+    });
+
+</script>
+
+<script>
+    /* 
+    when the open-menu is clicked, the header-menu will add an class="header-menu-open". open-menu will change to close-menu. body will add class body-mobile-menu and header-menu will add class header-menu-open.
+    when the open-menu is clicked again, the header-menu will remove the class="header-menu-open". close-menu will change to open-menu.
+    */
+    document.getElementById('open-menu').addEventListener('click', function () {
+        var headerMenu = document.getElementById('header-menu');
+        var openMenu = document.getElementById('open-menu');
+        if (headerMenu.classList.contains('header-menu-open')) {
+            headerMenu.classList.remove('header-menu-open');
+            openMenu.src = 'assets/images/open-menu.png';
+        } else {
+            headerMenu.classList.add('header-menu-open');
+            openMenu.src = 'assets/images/close-menu.png';
+        }
+    });
+
+    
+</script>
 
 </html>
